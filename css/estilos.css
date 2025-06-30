@@ -1,0 +1,379 @@
+* { 
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a0033;
+  color: white;
+}
+
+header {
+  background-color: #2a004d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow: 0 0 4px #ff66cc, 0 0 8px #ff66cc, 0 0 12px #ff66cc, 0 0 16px #ff66cc;
+  }
+  50% {
+    text-shadow: 0 0 2px #ff66cc, 0 0 4px #ff66cc, 0 0 6px #ff66cc, 0 0 8px #ff66cc;
+  }
+}
+
+header h1 {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2rem, 6vw, 5rem);
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 4px #ff66cc, 0 0 8px #ff66cc, 0 0 12px #ff66cc, 0 0 16px #ff66cc;
+  margin: 0;
+  padding: 10px 20px;
+  letter-spacing: 6px;
+  text-align: left;
+  flex: 1 1 auto;
+  animation: neonGlow 1.8s ease-in-out infinite;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff66cc;
+  transform: scale(1.2);
+}
+
+nav a:focus {
+  outline: 3px solid #ff66cc;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@keyframes neonGlowPink {
+  0%, 100% {
+    text-shadow: 0 0 4px #ff66cc, 0 0 8px #ff66cc, 0 0 12px #ff66cc, 0 0 16px #ff66cc;
+  }
+  50% {
+    text-shadow: 0 0 2px #ff66cc, 0 0 4px #ff66cc, 0 0 6px #ff66cc, 0 0 8px #ff66cc;
+  }
+}
+
+#destacados h2,
+#Categorias h2,
+#contacto h2 {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: black;
+  text-align: left;
+  margin-bottom: 30px;
+  animation: neonGlowPink 1.8s ease-in-out infinite;
+  padding: 10px 20px 10px 0;
+  letter-spacing: 2px;
+}
+
+.categoria h3 {
+  margin-top: 10px;
+  color: white;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.categoria h3:hover {
+  color: #ff66cc;
+  transform: scale(1.2);
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+}
+
+section {
+  padding: 40px;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tarjeta {
+  background-color: #3a0066;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px #ff00ff66;
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+  border-radius: 10px;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: box-shadow 0.3s ease;
+}
+
+.tarjeta h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #ff99ff;
+}
+
+.tarjeta p {
+  font-size: 0.9rem;
+}
+
+.Categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.categoria {
+  background-color: #3a0066;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 280px;
+}
+
+.categoria img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero img:hover,
+.tarjeta img:hover,
+.categoria img:hover {
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff;
+}
+
+@keyframes portadaNeonPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+  50% {
+    box-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc;
+  }
+}
+
+.hero-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #2a004d;
+  padding: 20px;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.hero-texto {
+  flex: 1 1 300px;
+  color: white;
+}
+
+.hero-imagen {
+  flex: 0 0 180px;
+  max-width: 180px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-imagen img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ff00ff;
+  animation: portadaNeonPulse 2s infinite ease-in-out;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.hero-imagen img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff66cc;
+}
+
+#contacto form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contacto form input,
+#contacto form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1.5px solid #ff66cc;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+#contacto form input:focus,
+#contacto form textarea:focus {
+  border-color: #ff99ff;
+  outline: none;
+}
+
+#contacto form button {
+  background-color: #ff66cc;
+  color: black;
+  padding: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto form button:hover {
+  background-color: #e055b3;
+  box-shadow: 0 0 10px #ff66cc;
+}
+
+/*INICIO PORTABILIDAD DE PLATAFORMAS TABLET (768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+
+  .tarjetas,
+  .Categorias {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .tarjeta,
+  .categoria {
+    width: calc(50% - 20px);
+    max-width: 180px;
+  }
+
+  .hero-contenido {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .hero-texto {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .hero-imagen {
+    flex: 1 1 180px;
+    max-width: 180px;
+  }
+
+  .hero-imagen img {
+    max-width: 100%;
+  }
+
+  #destacados h2,
+  #Categorias h2,
+  #contacto h2 {
+    font-size: 2rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 1rem;
+  }
+}
+/* FIN PORTABILIDAD TABLET */
+
+/* INICIO PORTABILIDAD DE PLATAFORMAS CELULAR (480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+    padding: 5px 10px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    margin: 4px 0;
+  }
+
+  .tarjeta,
+  .categoria {
+    width: calc(50% - 16px);
+    max-width: 160px;
+  }
+
+  .hero-imagen {
+    flex: 1 1 150px;
+    max-width: 150px;
+  }
+
+  .hero-texto {
+    font-size: 0.85rem;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 0.9rem;
+  }
+
+  #destacados h2,
+  #Categorias h2,
+  #contacto h2 {
+    font-size: 1.7rem;
+  }
+
+  #contacto form {
+    max-width: 90%;
+  }
+}
+/*FIN PORTABILIDAD CELULAR */
